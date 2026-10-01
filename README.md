@@ -131,7 +131,7 @@ numbers where the question asks for them.
 Same setup as A0: a Maven project you open in IntelliJ, with BRIDGES pulled
 from JitPack and your key read from `.env` by `BridgesConfig`.
 
-1. **File > Open** this folder, the one holding `pom.xml`. Wait for the Maven
+1. **File > Open** the folder you cloned, the one holding `pom.xml`. Wait for the Maven
    import to finish; the first one downloads BRIDGES and takes a minute or two.
 2. Copy `.env.example` to `.env` in the same folder and fill in the same
    username and API key you used in A0. Leave `BRIDGES_ASSIGNMENT` at 4.
@@ -175,7 +175,7 @@ automatic zero, and Gradescope scans every file you upload for one.
 ## Files
 
 ```
-a04-snake-queue-starter/     <- open THIS folder in IntelliJ
+your cloned folder/         <- open THIS folder in IntelliJ
   README.md                  this file
   writeup.md                 Part 4
   pom.xml                    Maven build, pulls BRIDGES, dotenv-java, JUnit
