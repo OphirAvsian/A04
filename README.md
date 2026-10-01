@@ -171,6 +171,11 @@ automatic zero, and Gradescope scans every file you upload for one.
 | Scripted games on your code | 8 | autograder |
 | Game URL loads under your account | 10 | instructor |
 | Write-up | 20 | instructor |
+| **Extra credit:** submit at least 72 hours before the deadline | +10 | autograder |
+
+The early bonus goes by the time of your Gradescope submission. Each
+submission is checked on its own, so a late resubmission does not earn it,
+even if an earlier one did.
 
 ## Files
 
