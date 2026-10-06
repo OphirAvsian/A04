@@ -40,6 +40,18 @@ public class LinkedQueue<E> implements Iterable<E> {
      */
     public void enqueue(E item) {
         // TODO
+        if(item == null){
+            throw new IllegalArgumentException("invalid");
+        }
+        Node<E> newNode = new Node<>(item);
+        if(size == 0){
+            head = newNode;
+            tail = newNode;
+        } else{
+            tail.next = newNode;
+            tail = newNode;
+        }
+        size++;
     }
 
     /**
@@ -49,7 +61,16 @@ public class LinkedQueue<E> implements Iterable<E> {
      */
     public E dequeue() {
         // TODO
-        return null;
+        if (head == null){
+            throw new NoSuchElementException("invalid");
+        }
+        E temp = head.data;
+        head = head.next;
+        size--;
+        if(size == 0){
+            tail = null;
+        }
+        return temp;
     }
 
     /**
@@ -59,7 +80,10 @@ public class LinkedQueue<E> implements Iterable<E> {
      */
     public E peek() {
         // TODO
-        return null;
+        if(size == 0){
+            throw new NoSuchElementException("invalid");
+        }
+        return head.data;
     }
 
     /**
@@ -69,19 +93,25 @@ public class LinkedQueue<E> implements Iterable<E> {
      */
     public E peekLast() {
         // TODO
-        return null;
+        if(size == 0){
+            throw new NoSuchElementException("invalid");
+        }
+        return tail.data;
     }
 
     /** Returns how many items are in the queue. */
     public int size() {
         // TODO
-        return 0;
+        return size;
     }
 
     /** Returns true when the queue holds no items. */
     public boolean isEmpty() {
         // TODO
-        return true;
+        if(size == 0) {
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -90,6 +120,12 @@ public class LinkedQueue<E> implements Iterable<E> {
      */
     public boolean contains(E item) {
         // TODO
+
+        for(Node<E> curr = head; curr!=null;curr = curr.next){
+            if(curr.data.equals(item)){
+                return true;
+            }
+        }
         return false;
     }
 
